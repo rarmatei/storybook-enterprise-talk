@@ -27,12 +27,46 @@
     ]
   },
   "projects": {
+    "admin": {
+      "tags": []
+    },
+    "admin-e2e": {
+      "tags": [],
+      "implicitDependencies": ["admin"]
+    },
+    "admin-feature-delivery-scheduler": {
+      "tags": []
+    },
+    "admin-feature-manage-orders": {
+      "tags": []
+    },
+    "common-data-access-graphql": {
+      "tags": []
+    },
+    "common-ui-image-radio-buttons": {
+      "tags": []
+    },
+    "common-ui-input": {
+      "tags": []
+    },
+    "common-ui-multi-select": {
+      "tags": []
+    },
+    "common-ui-progress-meter": {
+      "tags": []
+    },
     "pizza-store": {
       "tags": []
     },
     "pizza-store-e2e": {
       "tags": [],
       "implicitDependencies": ["pizza-store"]
+    },
+    "pizza-store-feature-payment-gateway": {
+      "tags": []
+    },
+    "pizza-store-ui-pizza-image": {
+      "tags": []
     }
   }
 }
