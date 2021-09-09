@@ -1,0 +1,129 @@
+{
+  "version": 2,
+  "projects": {
+    "pizza-store": {
+      "root": "apps/pizza-store",
+      "sourceRoot": "apps/pizza-store/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/web:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/pizza-store",
+            "index": "apps/pizza-store/src/index.html",
+            "main": "apps/pizza-store/src/main.tsx",
+            "polyfills": "apps/pizza-store/src/polyfills.ts",
+            "tsConfig": "apps/pizza-store/tsconfig.app.json",
+            "assets": [
+              "apps/pizza-store/src/favicon.ico",
+              "apps/pizza-store/src/assets"
+            ],
+            "styles": ["apps/pizza-store/src/styles.css"],
+            "scripts": [],
+            "webpackConfig": "@nrwl/react/plugins/webpack"
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/pizza-store/src/environments/environment.ts",
+                  "with": "apps/pizza-store/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/web:dev-server",
+          "options": {
+            "buildTarget": "pizza-store:build",
+            "hmr": true
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "pizza-store:build:production",
+              "hmr": false
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["apps/pizza-store/**/*.{ts,tsx,js,jsx}"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/pizza-store"],
+          "options": {
+            "jestConfig": "apps/pizza-store/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "pizza-store-e2e": {
+      "root": "apps/pizza-store-e2e",
+      "sourceRoot": "apps/pizza-store-e2e/src",
+      "projectType": "application",
+      "targets": {
+        "e2e": {
+          "executor": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/pizza-store-e2e/cypress.json",
+            "devServerTarget": "pizza-store:serve",
+            "tsConfig": "apps/pizza-store-e2e/tsconfig.json"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "pizza-store:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["apps/pizza-store-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/react"
+  },
+  "generators": {
+    "@nrwl/react": {
+      "application": {
+        "style": "css",
+        "linter": "eslint",
+        "babel": true
+      },
+      "component": {
+        "style": "css"
+      },
+      "library": {
+        "style": "css",
+        "linter": "eslint"
+      }
+    }
+  },
+  "defaultProject": "pizza-store"
+}
