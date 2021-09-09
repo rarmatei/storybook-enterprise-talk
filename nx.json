@@ -14,7 +14,13 @@
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
       "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e",
+          "build-storybook"
+        ]
       }
     }
   },
@@ -49,14 +55,30 @@
     "common-ui-image-radio-buttons": {
       "tags": []
     },
+    "common-ui-image-radio-buttons-e2e": {
+      "tags": [],
+      "implicitDependencies": ["common-ui-image-radio-buttons"]
+    },
     "common-ui-input": {
       "tags": []
+    },
+    "common-ui-input-e2e": {
+      "tags": [],
+      "implicitDependencies": ["common-ui-input"]
     },
     "common-ui-multi-select": {
       "tags": []
     },
+    "common-ui-multi-select-e2e": {
+      "tags": [],
+      "implicitDependencies": ["common-ui-multi-select"]
+    },
     "common-ui-progress-meter": {
       "tags": []
+    },
+    "common-ui-progress-meter-e2e": {
+      "tags": [],
+      "implicitDependencies": ["common-ui-progress-meter"]
     },
     "pizza-store": {
       "tags": []
