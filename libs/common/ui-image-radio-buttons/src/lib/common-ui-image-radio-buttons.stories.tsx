@@ -3,6 +3,7 @@ import {
   CommonUiImageRadioButtons,
   CommonUiImageRadioButtonsProps,
 } from './common-ui-image-radio-buttons';
+import { PhoneIcon, TimeIcon, WarningTwoIcon } from '@chakra-ui/icons';
 
 export default {
   component: CommonUiImageRadioButtons,
@@ -19,5 +20,19 @@ const Template: Story<CommonUiImageRadioButtonsProps> = (args) => (
 export const Primary = Template.bind({});
 Primary.args = {
   name: '',
-  label: '',
+  label: 'Select your icon',
+  options: [
+    {
+      value: 'warning',
+      image: <WarningTwoIcon />,
+    },
+    {
+      value: 'time',
+      image: <TimeIcon />,
+    },
+    {
+      value: 'phone',
+      image: <PhoneIcon />,
+    },
+  ],
 };

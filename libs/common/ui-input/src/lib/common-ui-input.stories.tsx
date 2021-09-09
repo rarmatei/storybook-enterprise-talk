@@ -12,7 +12,7 @@ const Template: Story<CommonUiInputProps> = (args) => (
 
 export const Primary = Template.bind({});
 Primary.args = {
-  name: '',
-  label: '',
+  name: 'storybook-input',
+  label: 'First name',
   type: '',
 };

@@ -15,9 +15,9 @@ const Template: Story<CommonUiProgressMeterProps> = (args) => (
 
 export const Primary = Template.bind({});
 Primary.args = {
-  value: 0,
-  size: '',
-  my: 0,
-  hasStripe: false,
-  isAnimated: false,
+  value: 25,
+  size: 'sm',
+  my: 5,
+  hasStripe: true,
+  isAnimated: true,
 };
