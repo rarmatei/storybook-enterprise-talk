@@ -1,14 +1,18 @@
-import './common-ui-progress-meter.module.css';
+import React from 'react';
 
-/* eslint-disable-next-line */
-export interface CommonUiProgressMeterProps {}
+import './common-ui-progress-meter.module.css';
+import { Progress, ProgressProps } from '@chakra-ui/react';
+
+export interface CommonUiProgressMeterProps {
+  value: number;
+  size?: string;
+  my?: number;
+  hasStripe?: boolean;
+  isAnimated?: boolean;
+}
 
 export function CommonUiProgressMeter(props: CommonUiProgressMeterProps) {
-  return (
-    <div>
-      <h1>Welcome to CommonUiProgressMeter!</h1>
-    </div>
-  );
+  return <Progress {...props}></Progress>;
 }
 
 export default CommonUiProgressMeter;

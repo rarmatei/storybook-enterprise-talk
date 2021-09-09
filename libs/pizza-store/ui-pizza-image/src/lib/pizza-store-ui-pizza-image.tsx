@@ -1,14 +1,23 @@
+import React from 'react';
+
 import './pizza-store-ui-pizza-image.module.css';
+import { Image, Stack, Text } from '@chakra-ui/react';
 
-/* eslint-disable-next-line */
-export interface PizzaStoreUiPizzaImageProps {}
+export interface OrderPizzaUiPizzaImageProps {
+  imageSrc: string;
+  description: string;
+}
 
-export function PizzaStoreUiPizzaImage(props: PizzaStoreUiPizzaImageProps) {
+export function OrderPizzaUiPizzaImage({
+                                         imageSrc,
+                                         description,
+                                       }: OrderPizzaUiPizzaImageProps) {
   return (
-    <div>
-      <h1>Welcome to PizzaStoreUiPizzaImage!</h1>
-    </div>
+    <Stack alignItems="center">
+      <Image maxW="100px" maxH="100px" src={imageSrc}></Image>
+      <Text color="black">"{description}"</Text>
+    </Stack>
   );
 }
 
-export default PizzaStoreUiPizzaImage;
+export default OrderPizzaUiPizzaImage;

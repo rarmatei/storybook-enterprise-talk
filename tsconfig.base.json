@@ -15,30 +15,30 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@storybook-demo/admin/feature-delivery-scheduler": [
+      "@nx-pizza/admin/feature-delivery-scheduler": [
         "libs/admin/feature-delivery-scheduler/src/index.ts"
       ],
-      "@storybook-demo/admin/feature-manage-orders": [
+      "@nx-pizza/admin/feature-manage-orders": [
         "libs/admin/feature-manage-orders/src/index.ts"
       ],
-      "@storybook-demo/common/data-access-graphql": [
+      "@nx-pizza/common/data-access-graphql": [
         "libs/common/data-access-graphql/src/index.ts"
       ],
-      "@storybook-demo/common/ui-form": ["libs/common/ui-form/src/index.ts"],
-      "@storybook-demo/common/ui-image-radio-buttons": [
+      "@nx-pizza/common/ui-form": ["libs/common/ui-form/src/index.ts"],
+      "@nx-pizza/common/ui-image-radio-buttons": [
         "libs/common/ui-image-radio-buttons/src/index.ts"
       ],
-      "@storybook-demo/common/ui-input": ["libs/common/ui-input/src/index.ts"],
-      "@storybook-demo/common/ui-multi-select": [
+      "@nx-pizza/common/ui-input": ["libs/common/ui-input/src/index.ts"],
+      "@nx-pizza/common/ui-multi-select": [
         "libs/common/ui-multi-select/src/index.ts"
       ],
-      "@storybook-demo/common/ui-progress-meter": [
+      "@nx-pizza/common/ui-progress-meter": [
         "libs/common/ui-progress-meter/src/index.ts"
       ],
-      "@storybook-demo/pizza-store/feature-payment-gateway": [
+      "@nx-pizza/pizza-store/feature-payment-gateway": [
         "libs/pizza-store/feature-payment-gateway/src/index.ts"
       ],
-      "@storybook-demo/pizza-store/ui-pizza-image": [
+      "@nx-pizza/pizza-store/ui-pizza-image": [
         "libs/pizza-store/ui-pizza-image/src/index.ts"
       ]
     }

@@ -1,5 +1,5 @@
 {
-  "npmScope": "storybook-demo",
+  "npmScope": "nx-pizza",
   "affected": {
     "defaultBase": "master"
   },
