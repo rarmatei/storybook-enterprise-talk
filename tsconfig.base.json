@@ -24,6 +24,7 @@
       "@storybook-demo/common/data-access-graphql": [
         "libs/common/data-access-graphql/src/index.ts"
       ],
+      "@storybook-demo/common/ui-form": ["libs/common/ui-form/src/index.ts"],
       "@storybook-demo/common/ui-image-radio-buttons": [
         "libs/common/ui-image-radio-buttons/src/index.ts"
       ],

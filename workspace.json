@@ -171,6 +171,28 @@
         }
       }
     },
+    "common-ui-form": {
+      "root": "libs/common/ui-form",
+      "sourceRoot": "libs/common/ui-form/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/common/ui-form/**/*.{ts,tsx,js,jsx}"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/common/ui-form"],
+          "options": {
+            "jestConfig": "libs/common/ui-form/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
     "common-ui-image-radio-buttons": {
       "root": "libs/common/ui-image-radio-buttons",
       "sourceRoot": "libs/common/ui-image-radio-buttons/src",

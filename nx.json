@@ -43,6 +43,9 @@
     "common-data-access-graphql": {
       "tags": []
     },
+    "common-ui-form": {
+      "tags": []
+    },
     "common-ui-image-radio-buttons": {
       "tags": []
     },
