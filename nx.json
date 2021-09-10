@@ -46,6 +46,9 @@
     "admin-feature-manage-orders": {
       "tags": []
     },
+    "common-all-stories": {
+      "tags": []
+    },
     "common-data-access-graphql": {
       "tags": []
     },

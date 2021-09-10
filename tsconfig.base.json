@@ -21,6 +21,7 @@
       "@nx-pizza/admin/feature-manage-orders": [
         "libs/admin/feature-manage-orders/src/index.ts"
       ],
+      "@nx-pizza/common/all-stories": ["libs/common/all-stories/src/index.ts"],
       "@nx-pizza/common/data-access-graphql": [
         "libs/common/data-access-graphql/src/index.ts"
       ],
