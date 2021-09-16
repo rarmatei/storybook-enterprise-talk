@@ -25,6 +25,7 @@
       "@nx-pizza/common/data-access-graphql": [
         "libs/common/data-access-graphql/src/index.ts"
       ],
+      "@nx-pizza/common/ui-button": ["libs/common/ui-button/src/index.ts"],
       "@nx-pizza/common/ui-form": ["libs/common/ui-form/src/index.ts"],
       "@nx-pizza/common/ui-image-radio-buttons": [
         "libs/common/ui-image-radio-buttons/src/index.ts"
@@ -36,11 +37,18 @@
       "@nx-pizza/common/ui-progress-meter": [
         "libs/common/ui-progress-meter/src/index.ts"
       ],
+      "@nx-pizza/pizza-configurator": ["libs/pizza-configurator/src/index.ts"],
       "@nx-pizza/pizza-store/feature-payment-gateway": [
         "libs/pizza-store/feature-payment-gateway/src/index.ts"
       ],
+      "@nx-pizza/pizza-store/ui-pizza-configurator": [
+        "libs/pizza-store/ui-pizza-configurator/src/index.ts"
+      ],
       "@nx-pizza/pizza-store/ui-pizza-image": [
         "libs/pizza-store/ui-pizza-image/src/index.ts"
+      ],
+      "@nx-pizza/pizza-store/ui-pizza-selector": [
+        "libs/pizza-store/ui-pizza-selector/src/index.ts"
       ]
     }
   },

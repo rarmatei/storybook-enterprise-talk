@@ -224,6 +224,85 @@
         }
       }
     },
+    "common-ui-button": {
+      "root": "libs/common/ui-button",
+      "sourceRoot": "libs/common/ui-button/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/common/ui-button/**/*.{ts,tsx,js,jsx}"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/common/ui-button"],
+          "options": {
+            "jestConfig": "libs/common/ui-button/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "storybook": {
+          "executor": "@nrwl/storybook:storybook",
+          "options": {
+            "uiFramework": "@storybook/react",
+            "port": 4400,
+            "config": {
+              "configFolder": "libs/common/ui-button/.storybook"
+            }
+          },
+          "configurations": {
+            "ci": {
+              "quiet": true
+            }
+          }
+        },
+        "build-storybook": {
+          "executor": "@nrwl/storybook:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "uiFramework": "@storybook/react",
+            "outputPath": "dist/storybook/common-ui-button",
+            "config": {
+              "configFolder": "libs/common/ui-button/.storybook"
+            }
+          },
+          "configurations": {
+            "ci": {
+              "quiet": true
+            }
+          }
+        }
+      }
+    },
+    "common-ui-button-e2e": {
+      "root": "apps/common-ui-button-e2e",
+      "sourceRoot": "apps/common-ui-button-e2e/src",
+      "projectType": "application",
+      "targets": {
+        "e2e": {
+          "executor": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/common-ui-button-e2e/cypress.json",
+            "devServerTarget": "common-ui-button:storybook"
+          },
+          "configurations": {
+            "ci": {
+              "devServerTarget": "common-ui-button:storybook:ci"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["apps/common-ui-button-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
     "common-ui-form": {
       "root": "libs/common/ui-form",
       "sourceRoot": "libs/common/ui-form/src",
@@ -572,6 +651,28 @@
         }
       }
     },
+    "pizza-configurator": {
+      "root": "libs/pizza-configurator",
+      "sourceRoot": "libs/pizza-configurator/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/pizza-configurator/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/pizza-configurator"],
+          "options": {
+            "jestConfig": "libs/pizza-configurator/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
     "pizza-store": {
       "root": "apps/pizza-store",
       "sourceRoot": "apps/pizza-store/src",
@@ -700,6 +801,89 @@
         }
       }
     },
+    "pizza-store-ui-pizza-configurator": {
+      "root": "libs/pizza-store/ui-pizza-configurator",
+      "sourceRoot": "libs/pizza-store/ui-pizza-configurator/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": [
+              "libs/pizza-store/ui-pizza-configurator/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/pizza-store/ui-pizza-configurator"],
+          "options": {
+            "jestConfig": "libs/pizza-store/ui-pizza-configurator/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "storybook": {
+          "executor": "@nrwl/storybook:storybook",
+          "options": {
+            "uiFramework": "@storybook/react",
+            "port": 4400,
+            "config": {
+              "configFolder": "libs/pizza-store/ui-pizza-configurator/.storybook"
+            }
+          },
+          "configurations": {
+            "ci": {
+              "quiet": true
+            }
+          }
+        },
+        "build-storybook": {
+          "executor": "@nrwl/storybook:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "uiFramework": "@storybook/react",
+            "outputPath": "dist/storybook/pizza-store-ui-pizza-configurator",
+            "config": {
+              "configFolder": "libs/pizza-store/ui-pizza-configurator/.storybook"
+            }
+          },
+          "configurations": {
+            "ci": {
+              "quiet": true
+            }
+          }
+        }
+      }
+    },
+    "pizza-store-ui-pizza-configurator-e2e": {
+      "root": "apps/pizza-store-ui-pizza-configurator-e2e",
+      "sourceRoot": "apps/pizza-store-ui-pizza-configurator-e2e/src",
+      "projectType": "application",
+      "targets": {
+        "e2e": {
+          "executor": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/pizza-store-ui-pizza-configurator-e2e/cypress.json",
+            "devServerTarget": "pizza-store-ui-pizza-configurator:storybook"
+          },
+          "configurations": {
+            "ci": {
+              "devServerTarget": "pizza-store-ui-pizza-configurator:storybook:ci"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": [
+              "apps/pizza-store-ui-pizza-configurator-e2e/**/*.{js,ts}"
+            ]
+          }
+        }
+      }
+    },
     "pizza-store-ui-pizza-image": {
       "root": "libs/pizza-store/ui-pizza-image",
       "sourceRoot": "libs/pizza-store/ui-pizza-image/src",
@@ -720,6 +904,89 @@
           "options": {
             "jestConfig": "libs/pizza-store/ui-pizza-image/jest.config.js",
             "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "pizza-store-ui-pizza-selector": {
+      "root": "libs/pizza-store/ui-pizza-selector",
+      "sourceRoot": "libs/pizza-store/ui-pizza-selector/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": [
+              "libs/pizza-store/ui-pizza-selector/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/pizza-store/ui-pizza-selector"],
+          "options": {
+            "jestConfig": "libs/pizza-store/ui-pizza-selector/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "storybook": {
+          "executor": "@nrwl/storybook:storybook",
+          "options": {
+            "uiFramework": "@storybook/react",
+            "port": 4400,
+            "config": {
+              "configFolder": "libs/pizza-store/ui-pizza-selector/.storybook"
+            }
+          },
+          "configurations": {
+            "ci": {
+              "quiet": true
+            }
+          }
+        },
+        "build-storybook": {
+          "executor": "@nrwl/storybook:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "uiFramework": "@storybook/react",
+            "outputPath": "dist/storybook/pizza-store-ui-pizza-selector",
+            "config": {
+              "configFolder": "libs/pizza-store/ui-pizza-selector/.storybook"
+            }
+          },
+          "configurations": {
+            "ci": {
+              "quiet": true
+            }
+          }
+        }
+      }
+    },
+    "pizza-store-ui-pizza-selector-e2e": {
+      "root": "apps/pizza-store-ui-pizza-selector-e2e",
+      "sourceRoot": "apps/pizza-store-ui-pizza-selector-e2e/src",
+      "projectType": "application",
+      "targets": {
+        "e2e": {
+          "executor": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/pizza-store-ui-pizza-selector-e2e/cypress.json",
+            "devServerTarget": "pizza-store-ui-pizza-selector:storybook"
+          },
+          "configurations": {
+            "ci": {
+              "devServerTarget": "pizza-store-ui-pizza-selector:storybook:ci"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": [
+              "apps/pizza-store-ui-pizza-selector-e2e/**/*.{js,ts}"
+            ]
           }
         }
       }

@@ -50,7 +50,14 @@
       "tags": []
     },
     "common-data-access-graphql": {
-      "tags": []
+      "tags": ["type:data-access"]
+    },
+    "common-ui-button": {
+      "tags": ["type:ui"]
+    },
+    "common-ui-button-e2e": {
+      "tags": [],
+      "implicitDependencies": ["common-ui-button"]
     },
     "common-ui-form": {
       "tags": []
@@ -83,6 +90,9 @@
       "tags": [],
       "implicitDependencies": ["common-ui-progress-meter"]
     },
+    "pizza-configurator": {
+      "tags": []
+    },
     "pizza-store": {
       "tags": []
     },
@@ -93,8 +103,22 @@
     "pizza-store-feature-payment-gateway": {
       "tags": []
     },
+    "pizza-store-ui-pizza-configurator": {
+      "tags": ["scope:pizza-store", "type:ui"]
+    },
+    "pizza-store-ui-pizza-configurator-e2e": {
+      "tags": [],
+      "implicitDependencies": ["pizza-store-ui-pizza-configurator"]
+    },
     "pizza-store-ui-pizza-image": {
       "tags": []
+    },
+    "pizza-store-ui-pizza-selector": {
+      "tags": ["scope:pizza-store", "type:ui"]
+    },
+    "pizza-store-ui-pizza-selector-e2e": {
+      "tags": [],
+      "implicitDependencies": ["pizza-store-ui-pizza-selector"]
     }
   }
 }
